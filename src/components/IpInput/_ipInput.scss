@@ -1,0 +1,60 @@
+@use "../../abstracts/mixins" as *;
+@use "../../abstracts/colors" as c;
+@use "../../abstracts/variables" as v;
+@use "../../base/functions" as func;
+
+.input-container {
+  @include flex(row, space-between);
+  margin-inline: auto;
+  border-radius: v.$border-radius;
+  transition: v.$main-transition;
+  @media (width > func.rem(768)) {
+    width: func.rem(500);
+    margin-bottom: 7rem;
+  }
+  @media (width <= func.rem(768)) {
+    width: 90%;
+    margin-bottom: 10rem;
+  }
+
+  &__input {
+    flex-grow: 1;
+    padding-block: v.$border-radius;
+    padding-inline: calc(v.$border-radius + 0.25rem);
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-top-left-radius: v.$border-radius;
+    border-bottom-left-radius: v.$border-radius;
+    font-family: inherit;
+    color: c.$very-dark-gray;
+    caret: c.$very-dark-gray;
+    @media (width < func.rem(440)) {
+      font-size: 0.9rem;
+    }
+    @media (width < func.rem(375)) {
+      font-size: 0.75rem;
+    }
+    &::placeholder {
+      color: c.$dark-gray;
+    }
+  }
+
+  &__btn {
+    background: black;
+    padding: 1.25rem;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-top-right-radius: v.$border-radius;
+    border-bottom-right-radius: v.$border-radius;
+    transition: v.$main-transition;
+    &:where(:focus-visible, :hover) {
+      background: c.$very-dark-gray;
+    }
+  }
+
+  &:where(:focus-within) {
+    outline: auto;
+  }
+}

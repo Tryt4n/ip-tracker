@@ -1,0 +1,10 @@
+@use "../../base/functions" as func;
+
+.leaflet-container {
+  flex-grow: 1;
+  min-height: func.rem(500);
+}
+
+.leaflet-control-container {
+  display: none;
+}
