@@ -1,10 +1,9 @@
 import { useRef, useState } from "react";
 
-export default function IpInput({ setIp }) {
+export default function IpInput({ setIp, isValidIp }) {
   const [value, setValue] = useState("");
   const [hasColon, setHasColon] = useState(false);
   const [hasDot, setHasDot] = useState(false);
-  const [isValidIp, setIsValidIp] = useState(true);
   const ipRef = useRef(null);
 
   function changeIp(inputValue) {
