@@ -7,10 +7,10 @@ const customMarkerIcon = new Icon({
   iconSize: [46, 56],
 });
 
-export default function Map({ latitude, longitude }) {
+export default function Map({ latitude, longitude, isValidIp }) {
   return (
     <>
-      {latitude || longitude ? (
+      {(latitude || longitude) && isValidIp ? (
         <LocationMap
           latitude={latitude}
           longitude={longitude}

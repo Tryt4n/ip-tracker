@@ -68,6 +68,16 @@
     @media (width < func.rem(375)) {
       font-size: calc(v.$data-information-font-size * (2 / 3));
     }
+    &--ip-address {
+      word-break: break-all;
+    }
+  }
+
+  &__warning-info {
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+    color: hsl(0, 75%, 50%);
   }
 }
 
