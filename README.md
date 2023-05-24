@@ -1,5 +1,7 @@
 # Frontend Mentor - IP address tracker
 
+[Link to the page](https://ip-tracker-with-react.netlify.app/)
+
 ![Design preview for the IP address tracker coding challenge](./design/desktop-preview.jpg)
 
 ## Welcome! 👋
